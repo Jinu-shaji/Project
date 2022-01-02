@@ -4,9 +4,9 @@ $con=mysqli_connect('localhost','root','','project');
 if(isset($_POST['login'])){
 	$uid=$_POST['uid'];
 	$password=$_POST['password'];
-	$role=$_POST['role'];
+	
 
-	$check="select * from login where  uid='$uid'AND password='$password'AND role='$role'";
+	$check="select * from login where  uid='$uid'AND password='$password'AND role='admin'";
 
 	$run=mysqli_query($con,$check);
 	if(mysqli_num_rows($run)>0){
@@ -43,23 +43,16 @@ if(isset($_POST['login'])){
 		<font face="Bahnschrift Condensed"><center><h1>Login To Continue..</h1>
 			<form method="POST" action="">
 				<div class="imgcontainer">
-					<img src="avatar.png" class="avatar"><div>
+					<img src="avatar1.png" class="avatar"><div><br>
 
   <div class="container">
-    <label for="uid"><b>UserId</b></label>
-    <input type="text" placeholder="Enter UserId" name="uid" required></div>
+    <label for="uid"><b>UserName</b></label>
+    <input type="text"  name="uid" required></div>
  <div class="container">
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password"  name="password" required>
 </div>
-    <div class="container">
-<label for="uid"><b>Role</b></label>
-<select name="role"  required>
-<option value="">
-<option value="admin">admin
-<option value="class advisor">class advisor
-<option value="guide">guide
-	<option value="student">student
+    
 </select></div>
 
     <button type="submit" name="login">Login</button>

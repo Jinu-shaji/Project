@@ -11,22 +11,18 @@
 <li><a>Advisors</a>
 <ul>
 <li><a href="addadvisor.php">Add advisors</a></li>
-<li><a href="#">view advisors</a></li>
+<li><a href="advview.php">view advisors</a></li>
 
 </ul>
 </li>
-<li><a href="#">Change Password</a>
+<li><a href="changepassword.php">Change Password</a></li>
 
-</li>
-<li><a href="home.html">Logout</a>
-
-</li>
-
+<li><a href="home.html">Logout!</a></li>
 </div>
 		<div class="title">
 			<h3>PROJECT PIVOT </h3></div></header><br><br>
 <link rel="stylesheet" type="text/css" href="form.css"><br><br><br><br><br>
-<center><h1><b><font face="Bahnschrift Condensed" >WELCOME ADMIN</font></b></h1></center>
+<center><h1><b><font size="50px" face="Bernard MT Condensed" >WELCOME ADMIN</font></b></h1></center>
 
 
 
