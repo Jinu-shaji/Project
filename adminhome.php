@@ -15,19 +15,14 @@
 
 </ul>
 </li>
-<li><a>#</a>
-<ul>
-<li><a href="#">D</a></li>
-<li><a href="#">E</a></li>
-</ul>
+<li><a href="#">Change Password</a>
+
 </li>
-<li><a>#</a>
-<ul>
-<li><a  href="#">F</a></li>
-<li><a href="#">G</a></li>
-</ul>
+<li><a href="home.html">Logout</a>
+
 </li>
-</ul></div>
+
+</div>
 		<div class="title">
 			<h3>PROJECT PIVOT </h3></div></header><br><br>
 <link rel="stylesheet" type="text/css" href="form.css"><br><br><br><br><br>
