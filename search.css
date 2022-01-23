@@ -1,0 +1,27 @@
+.input-group {
+margin: 10px 0px 10px 0px;
+font-size: 50px;
+padding: 5px;
+border-spacing: 5px;
+}
+.btn {
+padding: 3px;
+font-size: 15px;
+color: white;
+background:grey ;
+border:none;
+border-radius: 3px;
+}
+.btns {
+	font-size: 15px;
+}
+
+.btnedit {
+float:center;
+padding: 50px;
+font-size: 105px;
+color: white;
+background:green ;
+border:none;
+border-radius: 5px;
+}
