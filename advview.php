@@ -23,7 +23,9 @@ $result=mysqli_query($con,"select * from addadv ");
 <body><header>
             <div class="main">
     <ul>
-<li><a href="adminhome.php">Home</a></li></ul></div>
+<li><a href="adminhome.php">HOME</a></li>
+<li><a href="login.php">LOGIN</a></li>
+<li><a href="home.html">LOGOUT!</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
         <div class="title">
