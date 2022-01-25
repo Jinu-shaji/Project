@@ -6,18 +6,24 @@
 <body >
 	<header>
 		<div class="main">
-	<ul>
-<li><a href="adminhome.php">Home</a></li>
-<li><a>Advisors</a>
 <ul>
-<li><a href="addadvisor.php">Add advisors</a></li>
-<li><a href="advview.php">view advisors</a></li>
-
+  <li><a href="adminhome.php">HOME</a></li>
+  <!-- <li><a>Advisors</a> -->
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">ADVISORS</a>
+    <div class="dropdown-content">
+<ul>
+      <li><a href="addadvisor.php">Add Advisors</a></li>
+      <li><a href="advview.php">View Advisors</a></li>
 </ul>
-</li>
-<li><a href="changepassword.php">Change Password</a></li>
+    </div>
+  </li>
 
-<li><a href="home.html">Logout!</a></li>
+
+<li><a href="changepassword.php">CHANGE PASSWORD</a></li>
+
+<li><a href="home.html">LOGOUT!</a></li>
+</ul>
 </div>
 		<div class="title">
 			<h3>PROJECT PIVOT </h3></div></header><br><br>
@@ -26,6 +32,6 @@
 
 
 
-
+</div>
 
 </body>
