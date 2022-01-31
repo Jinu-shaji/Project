@@ -8,13 +8,22 @@
 		<div class="main">
 <ul>
   <li><a href="adminhome.php">HOME</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">STAFF</a>
+    <div class="dropdown-content">
+<ul>
+      <li><a href="staffadd.php">ADD</a></li>
+      <li><a href="staffview.php">VIEW</a></li>
+</ul>
+    </div>
+  </li>
   <!-- <li><a>Advisors</a> -->
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">ADVISORS</a>
     <div class="dropdown-content">
 <ul>
-      <li><a href="addadvisor.php">Add Advisors</a></li>
-      <li><a href="advview.php">View Advisors</a></li>
+      <li><a href="addadvisor.php">ADD</a></li>
+      <li><a href="advview.php">VIEW</a></li>
 </ul>
     </div>
   </li>

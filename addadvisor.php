@@ -1,3 +1,24 @@
+<?php
+session_start();
+$con=mysqli_connect('localhost','root','','project');
+$select="select *from staff";
+$selresult=mysqli_query($con,$select);
+$options="";
+while($row=mysqli_fetch_array($selresult))
+{
+$options=$options."<option>$row[1]</option>";
+}
+?>
+
+<?php
+$select2="select *from batch where batch !='2020-2200'";
+$selresult2=mysqli_query($con,$select2);
+$options2="";
+while($row2=mysqli_fetch_array($selresult2))
+{
+$options2=$options2."<option>$row2[0]</option>";
+}
+?>
 <!DOCTYPE html>
     <head>
         <!--meta charset="utf-8">
@@ -10,18 +31,7 @@
         <link rel="stylesheet" type="text/css" href="form.css">
 
         
-        <script type="text/javascript">
-          function add(value){
-
-            var x;
-            x=value-2+4;
-           
-          document.getElementById('end').value=x;
-    
-          
-        }
-
-        </script>
+        
     </head>
     <body>
 <header>
@@ -29,7 +39,7 @@
     <ul>
 <li><a href="adminhome.php">HOME</a></li>
 <li><a href="login.php">LOGIN</a></li>
-<li><a href="home.html">LOGOUT!</a></li></ul></div>
+<li><a href="main.html">LOGOUT!</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
 <font face="Bahnschrift Condensed">
@@ -38,32 +48,22 @@
 <form name="form2" method="post" action="" class="f2" >
   <fieldset >
 <legend><h4>BATCH</h4></legend>
-<div class="input-group"><table  width=90%>
-        <tr><td>
-<label>Star year:</label></td><td>
-<input type="text" name="" onkeyup="add(this.value);" required></td></tr>
-</div>
-<div class="input-group"><tr><td>
-<label>End year:</label></td><td>
-<input type="text" name="" id="end" required></div>
-<div class="input-group"><tr><td>
+
 <label>Batch:</label></td><td>
-<input type="text" name="batch" id="batch" required></div></table>
+<select name="batch"  required>
+  <option ></option>
+  <?php echo $options2; ?></select></div></table>
 </fieldset>
 <fieldset>
 <legend><h4></h4></legend>
 <div class="input-group">
   <table  width=100%>
 <tr><td>
-<label>Advisor Name:</label></td><td>
-<input type="text" name="name"  required></div>
-
-<div class="input-group"><tr><td>
-<label>Email:</label></td><td>
-<input type="email" name="email" required></div>
-<div class="input-group"><tr><td>
-<label>PhoneNo:</label></td><td>
-<input name="phone"   required></div></fieldset>
+<label>Advisor Name:</label></td><td></div>
+  <div class="custom-select" style="width:200px;">
+<select name="name"  required>
+  <option ></option>
+  <?php echo $options; ?></select></div>
 
 
        
@@ -91,9 +91,24 @@ if (isset($_POST['save'])) {
 
     $batch=$_POST['batch'];
     $name=$_POST['name'];
-    $email=$_POST['email'];
-    $phone=$_POST['phone'];
-  $uid=strstr($email,'@',true);
+    
+$s="select sid from staff where name='$name'";
+$si=mysqli_query($con,$s);
+while ($row=mysqli_fetch_array($si)) {
+  $sid=$row['sid'];
+  
+}
+
+
+
+$emai="select email from staff where name='$name'";
+$em=mysqli_query($con,$emai);
+while ($row=mysqli_fetch_array($em)) {
+  $email=$row['email'];
+  
+}
+  
+$uid=strstr($email,'@',true);
 function password_generate($chars) 
 {
   $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
@@ -101,12 +116,11 @@ function password_generate($chars)
 }
 $password=password_generate(7);
 
-
-$in="insert into batch (batch)values ('$batch')";
-$in1=mysqli_query($con,$in);
 $insert2="insert into login values ('$uid','$password','advisor','$batch')";
 $ins2=mysqli_query($con,$insert2);
-$insert="insert into addadv (batch,uid,name,email,phone)values ('$batch','$uid','$name','$email','$phone')";
+
+
+$insert="insert into advisor (batch,name,sid,uid)values ('$batch','$name','$sid','$uid')";
 $ins=mysqli_query($con,$insert);
 if($ins)  
    {  

@@ -7,8 +7,8 @@ if (isset($_POST['save'])){
 $batch=$_POST['batch'];
 
 }
-$result=mysqli_query($con,"select * from addadv ");
-$row=mysqli_fetch_array($result)
+$result=mysqli_query($con,"select * from advisor ");
+
 ?>
 
 
@@ -30,7 +30,7 @@ $row=mysqli_fetch_array($result)
 <header>
             <div class="main">
     <ul>
-<li><a href="advisorhome.php">Home</a></li></ul></div>
+<li><a href="advisorhome.php">HOME</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
 <font face="Bahnschrift Condensed">
@@ -46,15 +46,25 @@ Batch:
 <div class="input-group">
   <table  width=100%>
 <tr><td>
-<label>Guide Name:</label></td><td>
-<input type="text" name="name"  required></div>
+SelectGuides
+  <center>
+  <?php 
+     $checkquery="select * from staff";
+     $queryrun=mysqli_query($con,$checkquery);
+     if(mysqli_num_rows($queryrun)>0)
+     {
+      foreach($queryrun as $name)
+      {
+        ?>
+        <input type="checkbox" name="name[]" value="<?= $name['name'];?>" /><?= $name['name']; ?><br>
+        <?php
+      }
+     }
+   ?></center>
+</td><td>
+</div>
 
-<div class="input-group"><tr><td>
-<label>Email:</label></td><td>
-<input type="email" name="email" required></div>
-<div class="input-group"><tr><td>
-<label>PhoneNo:</label></td><td>
-<input name="phone"   required></div>
+
 
 
        
@@ -83,21 +93,55 @@ if (isset($_POST['save'])) {
 
     $batch=$_POST['batch'];
     $name=$_POST['name'];
-    $email=$_POST['email'];
-    $phone=$_POST['phone'];
-  $uid=strstr($email,'@',true);
+
 function password_generate($chars) 
 {
   $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
   return substr(str_shuffle($data), 0, $chars);
 }
-$password=password_generate(7);
 
-$insert2="insert into login values ('$uid','$password','guide','$batch')";
+    for ($i=0; $i < sizeof($name); $i++) { 
+
+$s="select sid from staff where name='" . $name[$i] ."'";
+$si=mysqli_query($con,$s);
+while ($row=mysqli_fetch_array($si)) {
+  $sid[$i]=$row['sid'];
+  
+}
+
+$emai="select email from staff where name='" . $name[$i] ."'";
+$em=mysqli_query($con,$emai);
+while ($row=mysqli_fetch_array($em)) {
+  $email[$i]=$row['email'];
+  
+}
+  
+$uid1[$i]=strstr($email[$i],'@',true);
+$uid[$i]=$uid1[$i] . $batch ;
+
+$password[$i]=password_generate(7);
+
+
+
+$insert2="insert into login values ('" . $uid[$i] ."','" . $password[$i] ."','guide','$batch')";
 $ins2=mysqli_query($con,$insert2);
-$insert="insert into addguide (batch,uid,name,email,phone)values ('$batch','$uid','$name','$email','$phone')";
-$ins=mysqli_query($con,$insert);
-if($ins)  
+
+     $chekinsrt="insert into guide(batch,name,sid,uid) values('$batch','" . $name[$i] ."','" . $sid[$i] ."','" . $uid[$i] ."')";
+      $chekinsrt_run=mysqli_query($con,$chekinsrt);
+    }
+    
+  //$uid=strstr($email,'@',true);
+//function password_generate($chars) 
+//{
+  //$data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+  //return substr(str_shuffle($data), 0, $chars);
+//}
+//$password=password_generate(7);
+
+//$insert2="insert into login values ('$uid','$password','guide','$batch')";
+//$ins2=mysqli_query($con,$insert2);
+
+/* if($ins)  
    {  
       echo'<script>alert("Successfully added")</script>';    
    }  
@@ -105,7 +149,7 @@ else
    {  
       echo'<script>alert("failed!!")</script>';  
    }
-
+*/
 
   //echo $password;
  /* $mail = new PHPMailer(true);

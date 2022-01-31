@@ -14,17 +14,17 @@ session_start();
 	<header>
 		<div class="main">
 	<ul>
-<li><a href="advisorhome.php">Home</a></li>
-<li><a>Guide</a>
+<li><a href="advisorhome.php">HOME</a></li>
+<li><a>GUIDE</a>
 <ul>
-<li><a href="addguide.php">Add Guide</a></li>
-<li><a href="guideview.php">view Guide</a></li>
+<li><a href="addguide.php">ADD</a></li>
+<li><a href="guideview.php">VIEW</a></li>
 
 </ul>
 </li>
-<li><a>change password</a>
+<li><a>CHANGE PASSWORD</a>
 </li>
-<li><a href="home.html">LogOut!</a>
+<li><a href="main.html">LOGOUT!</a>
 
 </li>
 </ul></div>
