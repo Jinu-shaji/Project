@@ -55,6 +55,14 @@ $options2=$options2."<option>$row2[0]</option>";
   <?php echo $options2; ?></select></div></table>
 </fieldset>
 <fieldset>
+<legend><h4>DEPARTMENT</h4></legend>
+
+<label>Department:</label></td><td>
+<select name="dept">
+  <option value="MCA">MCA</option>
+  </select></div></table>
+</fieldset>
+<fieldset>
 <legend><h4></h4></legend>
 <div class="input-group">
   <table  width=100%>
@@ -90,6 +98,7 @@ require('PHPMailer\PHPMailer.php'); */
 if (isset($_POST['save'])) {
 
     $batch=$_POST['batch'];
+    $dept=$_POST['dept'];
     $name=$_POST['name'];
     
 $s="select sid from staff where name='$name'";
@@ -120,7 +129,7 @@ $insert2="insert into login values ('$uid','$password','advisor','$batch')";
 $ins2=mysqli_query($con,$insert2);
 
 
-$insert="insert into advisor (batch,name,sid,uid)values ('$batch','$name','$sid','$uid')";
+$insert="insert into advisor (batch,dept,name,sid,uid)values ('$batch','$dept','$name','$sid','$uid')";
 $ins=mysqli_query($con,$insert);
 if($ins)  
    {  
