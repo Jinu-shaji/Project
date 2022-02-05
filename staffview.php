@@ -8,6 +8,9 @@ $sid=$_POST['sid'];
 $name=$_POST['name'];
 $email=$_POST['email'];
 $phone=$_POST['phone'];
+$dept=$_POST['dept'];
+$doj=$_POST['doj'];
+$experience=$_POST['experience'];
 
 }
 $result=mysqli_query($con,"select * from staff ");
@@ -37,22 +40,28 @@ $result=mysqli_query($con,"select * from staff ");
 <table >
 <thead class="trs">
 <tr >
-<th>STFID</th>
 <th>NAME</th>
 <th>EMAIL</th>
 <th>PHONE</th>
+<th>DEPARTMENT</th>
+<th>DATE OF JOINING</th>
+<th>TEACHING EXPERIENCE</th>
 
 <th colspan="2"> Action </th></tr></thead>
 <tbody>
 <?php while ($row=mysqli_fetch_array($result)) { ?>
 <tr>
-<td><?php echo $row['sid']; ?></td>
 <td><?php echo $row['name']; ?></td>
 <td><?php echo $row['email']; ?></td>
 <td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['dept']; ?></td>
+<td><?php echo $row['doj']; ?></td>
+<td><?php echo $row['experience']; ?></td>
+
 
 <td>
-<a class="del_btn" name="edit" href="advedit.php">EDIT</a></td>
+<a class="edt_btn" name="edit" href="advedit.php">EDIT</a>
+<a class="del_btn" name="delete" href="staffdlt.php?del=<?php echo $row['sid']; ?>">DELETE</a></td></td>
 </tr> <?php } ?>
 </table>
 </body>
