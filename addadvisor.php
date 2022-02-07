@@ -76,9 +76,9 @@ $options2=$options2."<option>$row2[0]</option>";
 
        
        <div class="input-group"><tr><td>
-<button type="reset" name="reset" class="btn" >RESET</button>
-</td><td>
 <button type="submit" name="save" class="btn" >ADD</button>
+</td><td>
+<button type="reset" name="reset" class="btn" >RESET</button>
 </td></tr></font>
 </div>
 </form> 
