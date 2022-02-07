@@ -36,12 +36,12 @@ text-align: left;
 margin: 15px;
 }
 .btn {
-	float: right;
+float: right;
 padding: 5px;
 font-size: 15px;
 
 color: white;
-background:blue ;
+background:#4CAF50 ;
 border:none;
 border-radius: 3px;
 }
@@ -113,3 +113,8 @@ border-radius: 5px;
 	font-family: arial;
 	font-size: 20px;
 	float: center;
+}
+
+.dropdown{
+    width: 100px;
+}
