@@ -1,0 +1,30 @@
+form{
+	vertical-align:top;
+
+	float:right;
+}
+
+}
+table
+{
+	border: 1px;
+
+}
+table{
+width: 20%;
+margin: 3px ;
+border-collapse: collapse;
+text-align: left;
+}
+th{
+	
+	font-size: 15px;
+}
+th,td{
+  border: 1px solid #000;
+height: 13px;
+padding:1px;
+}
+tr:hover {
+background:#F5F5F5;
+}

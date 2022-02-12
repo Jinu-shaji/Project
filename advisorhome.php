@@ -22,6 +22,13 @@ session_start();
 
 </ul>
 </li>
+<li><a>STUDENT</a>
+<ul>
+<li><a href="studentadd.php">ADD</a></li>
+<li><a href="groupstudent.php">GROUP</a></li>
+
+</ul>
+</li>
 <li><a>CHANGE PASSWORD</a>
 </li>
 <li><a href="main.html">LOGOUT!</a>
