@@ -106,13 +106,32 @@ if (isset($_POST['save'])) {
     $sname=$_POST['sname'];
     $name=$_POST['name'];
   $gno=$_POST['gno'];
-  $cbox=$_POST['sname'];
+   for ($i=0; $i < sizeof($sname); $i++) { 
+
+$s="select rollno from register where sname='" . $sname[$i] ."'";
+$si=mysqli_query($con,$s);
+while ($row=mysqli_fetch_array($si)) {
+  $rollno[$i]=$row['rollno'];
+  
+}
+  /*$cbox=$_POST['sname'];
   $chk="";
   foreach ($cbox as $chk1 ) {
     $chk.=$chk1.",";
   }
   $csql="insert into groupstu(batch,gno,name,guide)values('$batch','$gno','$chk','$name')";
-  $runcsql=mysqli_query($con,$csql);
+  $runcsql=mysqli_query($con,$csql);*/
+  $chekinsrt="insert into groupstu(batch,gno,name,rollno,guide) values('$batch','$gno','" . $sname[$i] ."','" . $rollno[$i] ."','$name')";
+      $chekinsrt_run=mysqli_query($con,$chekinsrt);
+    }
+    if($chekinsrt_run)  
+   {  
+      echo'<script>alert("Successfully added")</script>';    
+   }  
+else  
+   {  
+      echo'<script>alert("Failed!!")</script>';  
+   }
   
 
 }
@@ -131,7 +150,7 @@ $result=mysqli_query($con,"select * from groupstu ");
 while ($row=mysqli_fetch_array($result)){
 $count++;
   echo '<tr>
-    <td>'.$row['gno'].'</td>
+    <td >'.$row['gno'].'</td>
     <td>'.$row['name'].'</td>
     <td>'.$row['guide'].'</td>
   </tr>';
