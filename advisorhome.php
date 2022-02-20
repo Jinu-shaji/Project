@@ -25,7 +25,7 @@ session_start();
 <li><a>STUDENT</a>
 <ul>
 <li><a href="studentadd.php">ADD</a></li>
-<li><a href="groupstudent.php">GROUP</a></li>
+<li><a href="groupstudent.php">GROUP(mini project)</a></li>
 
 </ul>
 </li>
@@ -48,6 +48,6 @@ echo  $_SESSION['batch'] ;
 
 
 
-
+<a href="addworks.php">add works</a>
 
 </body>

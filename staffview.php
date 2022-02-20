@@ -32,11 +32,7 @@ $result=mysqli_query($con,"select * from staff ");
             <h3>PROJECT PIVOT </h3></div></header><br><br>
 <font face="Bahnschrift Condensed">
 <h2><center><font color="green">STAFF</font></center></h2>
-<form  method="post" action="advsearch.php" >
-	<div class="input-group"><table ><tr align="left" >
-<input type="text" name="srch" placeholder="search here.." class="btns">
-<input type="submit" name="search" value="search" class="btn"></tr></table></div>
-</form>
+
 <table >
 <thead class="trs">
 <tr >
@@ -44,7 +40,6 @@ $result=mysqli_query($con,"select * from staff ");
 <th>EMAIL</th>
 <th>PHONE</th>
 <th>DEPARTMENT</th>
-<th>DATE OF JOINING</th>
 <th>TEACHING EXPERIENCE</th>
 
 <th colspan="2"> Action </th></tr></thead>
@@ -55,12 +50,12 @@ $result=mysqli_query($con,"select * from staff ");
 <td><?php echo $row['email']; ?></td>
 <td><?php echo $row['phone']; ?></td>
 <td><?php echo $row['dept']; ?></td>
-<td><?php echo $row['doj']; ?></td>
+
 <td><?php echo $row['experience']; ?></td>
 
 
 <td>
-<a class="edt_btn" name="edit" href="advedit.php">EDIT</a>
+<a class="edt_btn" name="edit" href="staffedit.php">EDIT</a>
 <a class="del_btn" name="delete" href="staffdlt.php?del=<?php echo $row['sid']; ?>">DELETE</a></td></td>
 </tr> <?php } ?>
 </table>

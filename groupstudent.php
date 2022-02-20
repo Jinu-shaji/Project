@@ -45,6 +45,8 @@ $result=mysqli_query($con,"select * from advisor ");
 <center><h2>GROUP STUDENTS(<?php 
 echo  $_SESSION['batch'] ;
 ?>)</h2>
+
+<h3>Group students for Mini project</h3>
 <form name="form4" method="post" action="" class="f2" >
 <div class="input-group">
   <table  width=100%>

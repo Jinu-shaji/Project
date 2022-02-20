@@ -45,20 +45,8 @@ Batch:
 
 <div class="input-group">
   <table  width=100%>
-<tr>
-<td><br>Type of Project:
- <select name="projecttype" id="projecttype" class="dropdown">
-    <option value="-1">--Select--</option>
-    <option value="mini">Mini Project</option>
-    <option value="main">Main Project</option>
-    <option value="seminar">Seminar</option>
-  </select>
-</td></div>
-
-<div class="input-group">
-  <table  width=100%>
-<tr><td><br><br>
-Select Guides
+<tr><td>
+SelectGuides
   <center>
   <?php 
      $checkquery="select * from staff";
@@ -81,9 +69,9 @@ Select Guides
 
        
        <div class="input-group"><tr><td>
-		<button type="submit" name="save" class="btn" >ADD</button>
-</td><td>
 <button type="reset" name="reset" class="btn" >RESET</button>
+</td><td>
+<button type="submit" name="save" class="btn" >ADD</button>
 </td></tr></font>
 </div>
 </form> 
@@ -105,7 +93,6 @@ if (isset($_POST['save'])) {
 
     $batch=$_POST['batch'];
     $name=$_POST['name'];
-	$projecttype=$_POST['projecttype'];
 
 function password_generate($chars) 
 {
@@ -139,9 +126,26 @@ $password[$i]=password_generate(7);
 $insert2="insert into login values ('" . $uid[$i] ."','" . $password[$i] ."','guide','$batch')";
 $ins2=mysqli_query($con,$insert2);
 
-     $chekinsrt="insert into guide(batch,name,sid,uid,projecttype) values('$batch','" . $name[$i] ."','" . $sid[$i] ."','" . $uid[$i] ."','$projecttype')";
+if($ins2)  
+   {  
+      echo'<script>alert("Successfully added")</script>';    
+   }  
+else  
+   {  
+      echo'<script>alert("Failed!!")</script>';  
+   }
+
+     $chekinsrt="insert into guide(batch,name,sid,uid) values('$batch','" . $name[$i] ."','" . $sid[$i] ."','" . $uid[$i] ."')";
       $chekinsrt_run=mysqli_query($con,$chekinsrt);
     }
+    if($chekinsrt_run)  
+   {  
+      echo'<script>alert("Successfully added")</script>';    
+   }  
+else  
+   {  
+      echo'<script>alert("Failed!!")</script>';  
+   }
     
   //$uid=strstr($email,'@',true);
 //function password_generate($chars) 
@@ -154,15 +158,15 @@ $ins2=mysqli_query($con,$insert2);
 //$insert2="insert into login values ('$uid','$password','guide','$batch')";
 //$ins2=mysqli_query($con,$insert2);
 
- if($chekinsrt_run)  
+/* if($ins)  
    {  
       echo'<script>alert("Successfully added")</script>';    
    }  
 else  
    {  
-      echo'<script>alert("Failed!!")</script>';  
+      echo'<script>alert("failed!!")</script>';  
    }
-
+*/
 
   //echo $password;
  /* $mail = new PHPMailer(true);

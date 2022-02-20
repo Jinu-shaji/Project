@@ -28,7 +28,7 @@ $result=mysqli_query($con,"select * from advisor ");
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header><br><br>
 <font face="Bahnschrift Condensed">
-<h2><center><font color="green">STAFF</font></center></h2>
+<h2><center><font color="green">ADVISORS</font></center></h2>
 <form  method="post" action="advsearch.php" >
 	<div class="input-group"><table ><tr align="left" >
 <input type="text" name="srch" placeholder="search here.." class="btns">
@@ -39,7 +39,7 @@ $result=mysqli_query($con,"select * from advisor ");
 <tr >
 <th>BATCH</th>
 <th>NAME</th>
-<th>STAFFID</th>
+<th>DEPARTEMENT</th>
 
 
 <th colspan="2"> Action </th></tr></thead>
@@ -48,7 +48,7 @@ $result=mysqli_query($con,"select * from advisor ");
 <tr><td><?php echo $row['batch']; ?></td>
 	<td><?php echo $row['name']; ?></td>
 
-<td><?php echo $row['sid']; ?></td>
+<td><?php echo $row['dept']; ?></td>
 
 
 

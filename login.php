@@ -30,6 +30,21 @@ if(isset($_POST['login'])){
 		echo'<script>alert("Login failed!!")</script>'; 
 		
 	}
+
+
+	$check3="select * from login where  uid='$uid'AND password='$password' AND role='guide'";
+	$run3=mysqli_query($con,$check3);
+	if(mysqli_num_rows($run3)>0){
+		$row=mysqli_fetch_assoc($run3);
+		$_SESSION['batch']=$row['batch'];
+		$_SESSION['uid']=$row['uid'];
+		header("location:guidehome.php");
+		exit;   
+   }
+	else{
+		echo'<script>alert("Login failed!!")</script>'; 
+		
+	}
 }
 
 

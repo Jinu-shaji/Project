@@ -33,18 +33,18 @@ if(isset($_POST["search"]))
 {
  $search = mysqli_real_escape_string($connect, $_POST["srch"]);
  $query = "
-  SELECT * FROM addadv 
+  SELECT * FROM advisor 
   WHERE batch LIKE '%".$search."%'
   OR name LIKE '%".$search."%' 
-  OR email LIKE '%".$search."%' 
-  OR phone LIKE '%".$search."%' 
+  OR dept LIKE '%".$search."%' 
+   
   
  ";
 }
 else
 {
  $query = "
-  SELECT * FROM addadv ORDER BY batch
+  SELECT * FROM advisor ORDER BY batch
  ";
 }
 $result = mysqli_query($connect, $query);
@@ -56,8 +56,7 @@ if(mysqli_num_rows($result) > 0)
     <tr>
      <th>batch</th>
      <th>name</th>
-     <th>email</th>
-     <th>phone</th>
+     <th>department</th>
      <th>Action</th>
      
     </tr>
@@ -68,8 +67,7 @@ if(mysqli_num_rows($result) > 0)
    <tr>
     <td>'.$row["batch"].'</td>
     <td>'.$row["name"].'</td>
-    <td>'.$row["email"].'</td>
-    <td>'.$row["phone"].'</td>
+    <td>'.$row["dept"].'</td>
     <td>
 <a class="del_btn" name="edit" href="advedit.php">EDIT</a></td>
    </tr>

@@ -7,9 +7,9 @@ $con=mysqli_connect('localhost','root','','project');
     $phno=$_POST['phno'];
     $rollno=$_POST['rollno'];
     $ktuid=$_POST['ktuid'];
-    $type=$_POST['type'];
+    
   
-$insert="insert into register (sname,email,phno,rollno,ktuid,type)values ('$sname','$email','$phno','$rollno','$ktuid','$type')";
+$insert="insert into register (sname,email,phno,rollno,ktuid)values ('$sname','$email','$phno','$rollno','$ktuid')";
 $ins=mysqli_query($con,$insert);
 if($ins)  
    {  

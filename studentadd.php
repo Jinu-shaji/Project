@@ -32,7 +32,7 @@ $count=0;
     <th>phno</th>
     <th>rollno</th>
     <th>ktuid</th>
-    <th>type</th>
+    
   </tr>
 
 <?php
@@ -47,7 +47,6 @@ $count++;
     <td>'.$row['phno'].'</td>
     <td>'.$row['rollno'].'</td>
     <td>'.$row['ktuid'].'</td>
-    <td>'.$row['type'].'</td>
   </tr>';
 }
 
@@ -84,14 +83,7 @@ echo  $_SESSION['batch'] ;
 <div class="input-group"><tr><td>
 <label>rollno:</label></td><td>
 <input type="text" name="rollno" required></div>
-<div class="input-group"><tr><td>
-<label>ptype:</label></td><td>
-<select name="type" required>
-<option value="">
-<option value="main">MAIN
-  <option value="main">MINI
-</select></td></tr>
-</div>
+
        
        <div class="input-group"><tr><td>
         <button type="submit" name="save" class="btn" >ADD</button>

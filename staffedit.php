@@ -4,7 +4,7 @@
     if(isset($_POST['edit'])){ 
     $id = $_POST['id'];
     
-    $query = " select * from advisor where id='".$id."'";
+    $query = " select * from staff where id='".$id."'";
     $result = mysqli_query($con,$query);
 
 
@@ -13,9 +13,11 @@
  while($row=mysqli_fetch_assoc($result))
     {
       
-        $batch =$row['batch'];
-        $name = $row['name'];
+        $name =$row['name'];
+        $email = $row['email'];
+        $phone = $row['phone'];
         $dept = $row['dept'];
+        $experience = $row['experience'];
         
      }}
 ?>
@@ -59,6 +61,10 @@ echo  $_SESSION['batch'] ;
 <div class="input-group"><tr><td>
 <label>Department:</label></td><td>
 <input type="text" name="dept" >
+</div>
+<div class="input-group"><tr><td>
+<label>phone:</label></td><td>
+<input type="text" name="phone" >
 </div>
 
 
