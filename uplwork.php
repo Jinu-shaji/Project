@@ -40,7 +40,7 @@ $result=mysqli_query($con,"select * from work ");
 if (isset($_POST['save'])) {
 
     $file=$_POST['file'];
-    $instruction=$_POST['instruction'];
+
   
 $insert="update work set file='$file' where instruction='$instruction'";
 $ins=mysqli_query($con,$insert);

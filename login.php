@@ -45,6 +45,22 @@ if(isset($_POST['login'])){
 		echo'<script>alert("Login failed!!")</script>'; 
 		
 	}
+
+
+
+	$check4="select * from login where  uid='$uid'AND password='$password' AND role='student'";
+	$run4=mysqli_query($con,$check4);
+	if(mysqli_num_rows($run4)>0){
+		$row=mysqli_fetch_assoc($run4);
+		$_SESSION['batch']=$row['batch'];
+		$_SESSION['uid']=$row['uid'];
+		header("location:studenthome.php");
+		exit;   
+   }
+	else{
+		echo'<script>alert("Login failed!!")</script>'; 
+		
+	}
 }
 
 
