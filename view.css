@@ -5,17 +5,14 @@ border-collapse: collapse;
 text-align: left;
 }
 th{
-	background: #FAEBD7;
-	font-size: 15px;
+	font-size: 25px;
 }
 th,td{
   border: 1px solid #000;
 height: 30px;
 padding:2px;
 }
-tr:hover {
-background:#F5F5F5;
-}
+
 .btnedit {
 float:center;
 padding: 5px;

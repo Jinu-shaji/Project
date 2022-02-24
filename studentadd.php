@@ -10,9 +10,8 @@ $count=0;
         <title>Users</title>
 <link rel="stylesheet" type="text/css" href="maincss.css">
 <link rel="stylesheet" type="text/css" href="student.css">
-        
     </head>
-    <body>
+    <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 <header>
             <div class="main">
     <ul>
@@ -25,9 +24,9 @@ $count=0;
 
 
 <div class="container">
-<table>
-  <tr>
-    <th>NAME</th>
+<table style="background-color: silver; background-repeat: no-repeat;background-size: cover;opacity: 0.8;">
+  <tr width="100%" height="50px" bgcolor="lightblue">
+    <th >NAME</th>
     <th>EMAIL</th>
     <th>phno</th>
     <th>rollno</th>
@@ -64,9 +63,9 @@ $count++;
 <?php 
 echo  $_SESSION['batch'] ;
 ?>)</h2>
-<div class="input-group">
-  <table  width=100%>
-    <div class="input-group"><tr><td>
+<div class="input-group"  >
+  <table  width=100% style="background-image: url('blue.jpeg'); background-repeat: no-repeat;background-size: cover">
+    <div class="input-group"><tr ><td >
 <label>Name:</label></td><td>
 <input type="text" name="sname"  required></div>
 

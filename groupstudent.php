@@ -29,11 +29,12 @@ $result=mysqli_query($con,"select * from advisor ");
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script-->
         <title>Users</title>
 <link rel="stylesheet" type="text/css" href="maincss.css">
+
         
 
       
     </head>
-    <body>
+    <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 <header>
             <div class="main">
     <ul>
@@ -49,11 +50,11 @@ echo  $_SESSION['batch'] ;
 <h3>Group students for Mini project</h3>
 <form name="form4" method="post" action="" class="f2" >
 <div class="input-group">
-  <table  width=100%>
+  <table  width=100% style="background-image: url('blue.jpeg'); background-repeat: no-repeat;background-size: cover">
 <tr><td>
 <input type="hidden" name="batch"  value="<?php echo  $_SESSION['batch'] ; ?>" readonly></td></div>
 <div class="input-group">
-  <table  width=100%><td>
+  <table  width=100% ><td>
 GroupNo:
 <input type="number" name="gno"  >
 <div class="input-group">
@@ -136,7 +137,7 @@ else
 
 }
 ?>
-<table>
+<table border="2px" width="40%" >
   <tr>
     <th>GROUPNUMBER</th>
     <th>STUDENTS</th>
@@ -149,9 +150,9 @@ $count=0;
 $result=mysqli_query($con,"select * from groupstu ");
 while ($row=mysqli_fetch_array($result)){
 $count++;
-  echo '<tr>
+  echo '<tr >
     <td >'.$row['gno'].'</td>
-    <td>'.$row['name'].'</td>
+    <td >'.$row['name'].'</td>
     <td>'.$row['guide'].'</td>
   </tr>';
 }

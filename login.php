@@ -76,7 +76,7 @@ if(isset($_POST['login'])){
 <link rel="stylesheet" type="text/css" href="maincss.css">
 <link rel="stylesheet" type="text/css" href="login.css">
 	</head>
-	<body >
+	<body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 		<header>
 			<div class="main">
 	<ul>
@@ -88,17 +88,17 @@ if(isset($_POST['login'])){
             <h3>PROJECT PIVOT </h3></div></header>
 		<br><br>
 		<font face="Bahnschrift Condensed"><center><h1>Login To Continue..</h1>
-			<form method="POST" action="">
+			<form method="POST" action="" style="background-image: url('black.jpg'); background-repeat: no-repeat;background-size: cover">
 				<div class="imgcontainer">
 					<img src="avatar1.png" class="avatar"><div><br>
 
-  <div class="container">
+  <div class="container"><font color="white">
     <label for="uid"><b>UserName</b></label>
     <input type="text"  name="uid" required></div>
  <div class="container">
     <label for="password"><b>Password</b></label>
     <input type="password"  name="password" required>
-</div>
+</div></font>
     
 </select></div>
 

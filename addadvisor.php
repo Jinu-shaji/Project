@@ -33,7 +33,7 @@ $options2=$options2."<option>$row2[0]</option>";
         
         
     </head>
-    <body>
+    <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 <header>
             <div class="main">
     <ul>
@@ -45,7 +45,7 @@ $options2=$options2."<option>$row2[0]</option>";
 <font face="Bahnschrift Condensed">
 
 <center><h2>ADD ADVISOR</h2>
-<form name="form2" method="post" action="" class="f2" >
+<form name="form2" method="post" action="" class="f2" style="background-image: url('blue.jpeg'); background-repeat: no-repeat;background-size: cover">
   <fieldset >
 <legend><h4>BATCH</h4></legend>
 

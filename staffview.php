@@ -22,10 +22,10 @@ $result=mysqli_query($con,"select * from staff ");
 <link rel="stylesheet" type="text/css" href="maincss.css">
 <link rel="stylesheet" type="text/css" href="view.css">
 <link rel="stylesheet" type="text/css" href="search.css"></head>
-<body><header>
+<body style="background-image: url('sky.jpg'); background-repeat: no-repeat;background-size: cover"><header>
             <div class="main">
     <ul>
-<li><a href="adminhome.php">Home</a></li></ul></div>
+<li><a href="adminhome.php">HOME</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
         <div class="title">
@@ -33,8 +33,8 @@ $result=mysqli_query($con,"select * from staff ");
 <font face="Bahnschrift Condensed">
 <h2><center><font color="green">STAFF</font></center></h2>
 
-<table >
-<thead class="trs">
+<table style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
+<thead  >
 <tr >
 <th>NAME</th>
 <th>EMAIL</th>

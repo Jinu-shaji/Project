@@ -1,9 +1,20 @@
 <html>
 <head>
+  <style> 
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 40px; 
+  width: 200px;
+  height: 150px;  
+}
+
+
+</style>
 	<title>Div</title>
 <link rel="stylesheet" type="text/css" href="maincss.css">
 </head>
-<body >
+<body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 	<header>
 		<div class="main">
 <ul>
@@ -37,9 +48,19 @@
 		<div class="title">
 			<h3>PROJECT PIVOT </h3></div></header><br><br>
 <link rel="stylesheet" type="text/css" href="form.css"><br><br><br><br><br>
-<center><h1><b><font size="50px" face="Bernard MT Condensed" >WELCOME ADMIN</font></b></h1></center>
+<center><h1><b><font size="50px" face="Bernard MT Condensed" >WELCOME ADMIN</font></b></h1></center><br><br>
+<p><h2><marquee><font color="red">As an admin you can add staff and allocate advisors for each batch and can view the overall performance of students in each batch</marquee></h2></p>
 
-
+<br><br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="staffview.php" id="rcorners1">STAFF</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="advview.php" id="rcorners1">ADVISORS</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="guideview.php" id="rcorners1">GUIDES</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="" id="rcorners1">STUDENTS</a>
 
 </div>
 

@@ -5,17 +5,17 @@
 <link rel="stylesheet" type="text/css" href="maincss.css">
         <link rel="stylesheet" type="text/css" href="form.css">
     </head>
-    <body>
+    <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 <header>
             <div class="main">
     <ul>
-<li><a href="adminhome.php">Home</a></li></ul></div>
+<li><a href="adminhome.php">HOME</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
 <font face="Bahnschrift Condensed">
 
 <center><h2>ADD TEACHING STAFF</h2>
-<form name="form5" method="post" action="" class="f2" >
+<form name="form5" method="post" action="" class="f2"  style="background-image: url('blue.jpeg'); background-repeat: no-repeat;background-size: cover">
 <div class="input-group">
   <table  width=100%>
     <div class="input-group"><tr><td>

@@ -7,9 +7,18 @@ session_start();
 <html>
 <head>
 	<title>Div</title>
+	 <style> 
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 40px; 
+  width: 200px;
+  height: 150px;  
+}
+</style>
 <link rel="stylesheet" type="text/css" href="maincss.css">
 </head>
-<body >
+<body  style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 
 	<header>
 		<div class="main">
@@ -31,7 +40,7 @@ session_start();
 </li>
 <li><a>CHANGE PASSWORD</a>
 </li>
-<li><a href="main.html">LOGOUT!</a>
+<li><a href="home.html">LOGOUT!</a>
 
 </li>
 </ul></div>
@@ -48,6 +57,15 @@ echo  $_SESSION['batch'] ;
 
 
 
-<a href="addworks.php">add works</a>
+<p><h2><marquee><font color="red">As an advisor you can add students,allocate guides and group students and also assign works for them</marquee></h2></p>
+
+<br><br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="addworks.php" id="rcorners1">ADD WORKS</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="guideview.php" id="rcorners1">GUIDES</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="" id="rcorners1">STUDENTS</a>
 
 </body>

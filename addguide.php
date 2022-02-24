@@ -26,7 +26,7 @@ $result=mysqli_query($con,"select * from advisor ");
 
       
     </head>
-    <body>
+    <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 <header>
             <div class="main">
     <ul>
@@ -36,7 +36,7 @@ $result=mysqli_query($con,"select * from advisor ");
 <font face="Bahnschrift Condensed">
 
 <center><h2>ADD GUIDE</h2>
-<form name="form3" method="post" action="" class="f2" >
+<form name="form3" method="post" action="" class="f2" style="background-image: url('blue.jpeg'); background-repeat: no-repeat;background-size: cover">
 <div class="input-group">
   <table  width=100%>
 <tr><td>

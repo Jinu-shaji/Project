@@ -19,7 +19,7 @@ $result=mysqli_query($con,"select * from advisor ");
 <link rel="stylesheet" type="text/css" href="maincss.css">
 <link rel="stylesheet" type="text/css" href="view.css">
 <link rel="stylesheet" type="text/css" href="search.css"></head>
-<body><header>
+<body style="background-image: url('sky.jpg'); background-repeat: no-repeat;background-size: cover"><header>
             <div class="main">
     <ul>
 <li><a href="adminhome.php">HOME</a></li></ul></div>
@@ -30,7 +30,9 @@ $result=mysqli_query($con,"select * from advisor ");
 <font face="Bahnschrift Condensed">
 <h2><center><font color="green">ADVISORS</font></center></h2>
 <form  method="post" action="advsearch.php" >
-	<div class="input-group"><table ><tr align="left" >
+	<div class="input-group">
+		<table style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
+			<tr align="left" >
 <input type="text" name="srch" placeholder="search here.." class="btns">
 <input type="submit" name="search" value="search" class="btn"></tr></table></div>
 </form>
