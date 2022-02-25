@@ -33,6 +33,14 @@ $result=mysqli_query($con,"select * from staff ");
 <font face="Bahnschrift Condensed">
 <h2><center><font color="green">STAFF</font></center></h2>
 
+<form  method="post" action="advsearch.php" >
+	<div class="input-group">
+		<table style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
+			<tr align="left" >
+<input type="text" name="srch" placeholder="search here.." class="btns">
+<input type="submit" name="search" value="search" class="btn"></tr></table></div>
+</form>
+
 <table style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
 <thead  >
 <tr >
