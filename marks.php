@@ -29,7 +29,7 @@ $selresult1=mysqli_query($con,$select);
 </ul></div><form method="POST" action="" >
     <div class="title">
       <h3>PROJECT PIVOT </h3></div></header>
-  <center><h1>WORKS</h1><br><br><br><br><br>
+  <center><h1>MARKS(MINIPROJECT)</h1><br><br><br><br><br>
   <table >
 <thead  >
 <tr >
@@ -48,16 +48,20 @@ $si1=mysqli_query($con,$s1);
 while ($row=mysqli_fetch_array($si1)) {
   $id=$row['id'];
 }
+?></td>
+ 
+<td><?php
+ $s2="select mark from upwork where id='$id'";
+$si2=mysqli_query($con,$s2);
+while ($row=mysqli_fetch_array($si2)) {
+  echo $row['mark'];
+}
+ 
+?></td>
+</form><?php } ?></td>
 
 
-
-?>
- <td></td>
-
-</form></td>
-
-
-</tr> <?php } ?>
+</tr> 
 </table>
 </div>
 
