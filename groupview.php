@@ -4,14 +4,14 @@ session_start();
 ?>
 <html>
 <head>
-	<title>Divguide</title>
+  <title>Divguide</title>
 <link rel="stylesheet" type="text/css" href="maincss.css">
  
 </style>
 </head>
 <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover">
-	<header>
-		<div class="main">
+  <header>
+    <div class="main">
 <ul>
   <li><a href="guidehome.php">HOME</a></li>
   <!-- <li><a>Advisors</a> -->
@@ -22,8 +22,8 @@ session_start();
 <li><a href="home.html">LOGOUT!</a></li>
 </ul>
 </div>
-		<div class="title">
-			<h3>PROJECT PIVOT </h3></div></header>
+    <div class="title">
+      <h3>PROJECT PIVOT </h3></div></header>
 <link rel="stylesheet" type="text/css" href="form.css"><br>
 <h2><center>TEAM</h2>
 <form style="border-style: groove;">
@@ -32,7 +32,7 @@ session_start();
 $con=mysqli_connect('localhost','root','','project');
 if(!$con)
 echo "not connected";
-$uid=$_SESSION['uid'] ;
+
 /*$s="select name from guide where uid='$uid'";
 $si=mysqli_query($con,$s);
 while ($row=mysqli_fetch_array($si)) {
@@ -61,12 +61,14 @@ MEMBER : <?php echo $row['name']; ?>
 <thead  >
 <tr >
   <?php
-$s="select name from guide where uid='$uid'";
-$si=mysqli_query($con,$s);
-while ($row=mysqli_fetch_array($si)) {
-  $guide=$row['name'];
+  $uid=$_SESSION['uid'] ;
 
+$s1="select name from guide where uid='$uid'";
+$si1=mysqli_query($con,$s1);
+while ($row=mysqli_fetch_array($si1)) {
+  $guide=$row['name'];
 }
+
 
 
 $result=mysqli_query($con,"select * from groupstu where guide='$guide'");
@@ -78,10 +80,7 @@ $result=mysqli_query($con,"select * from groupstu where guide='$guide'");
 
 </tr>
 <br><br>
-<?php
-$result=mysqli_query($con,"select * from groupstu where guide='$guide'");
 
-?>
 
 <th>GROUP NUMBER</th>
 <th>MEMBERS</th>

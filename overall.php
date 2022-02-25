@@ -36,6 +36,7 @@ $s="select gno from groupstu where rollno='$rollno'";
 $si=mysqli_query($con,$s);
 while ($row=mysqli_fetch_array($si)) {
   $gno=$row['gno'];
+  $_SESSION['gno']=$row['gno'];
   echo "GROUP NUMBER : $gno";
 }
 ?>
