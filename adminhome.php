@@ -57,10 +57,9 @@
 <a href="staffview.php" id="rcorners1">STAFF</a>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="advview.php" id="rcorners1">ADVISORS</a>
+
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="guideview.php" id="rcorners1">GUIDES</a>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="" id="rcorners1">STUDENTS</a>
+<a href="viewstu.php" id="rcorners1">STUDENTS</a>
 
 </div>
 

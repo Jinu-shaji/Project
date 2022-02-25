@@ -37,7 +37,12 @@ session_start();
 <li><a href="groupstudent.php">GROUP(mini project)</a></li>
 
 </ul>
-</li>
+
+<li><a>ALLOTGUIDE</a>
+<ul>
+<li><a href="guidemain2.php">MAIN</a></li>
+<li><a href="guidesem.php">SEMINAR</a></li>
+</ul>
 <li><a>CHANGE PASSWORD</a>
 </li>
 <li><a href="home.html">LOGOUT!</a>
@@ -66,7 +71,7 @@ echo  $_SESSION['batch'] ;
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="guideview.php" id="rcorners1">GUIDES</a>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="" id="rcorners1">STUDENTS</a>
+<a href="viewstu.php" id="rcorners1">STUDENTS</a>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="" id="rcorners1">PERFORMANCE</a>
 

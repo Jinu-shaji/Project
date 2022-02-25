@@ -26,8 +26,8 @@ session_start();
     <div class="title">
       <h3>PROJECT PIVOT </h3></div></header>
 <link rel="stylesheet" type="text/css" href="form.css"><br>
-<h2><center>TEAM</h2>
-<form style="border-style: groove;">
+<h2><center>STUDENTS UNDER GUIDENESS</h2><br><br>
+<center><form style="border-style: groove;width: 20%">
 <?php
 
 $con=mysqli_connect('localhost','root','','project');
@@ -72,7 +72,7 @@ while ($row=mysqli_fetch_array($si1)) {
 
 
 
-$result=mysqli_query($con,"select * from groupstu where guide='$guide'");
+$result=mysqli_query($con,"select * from guidesem where guide='$guide'");
 
 ?>
 
@@ -81,16 +81,16 @@ $result=mysqli_query($con,"select * from groupstu where guide='$guide'");
 
 </tr>
 <br><br>
+<tr>
 
-
-<th>GROUP NUMBER</th>
-<th>MEMBERS</th>
+<th>STUDENTS   </th>
+<th>ROLLNO</th></tr>
 
 <tbody>
 <?php while ($row=mysqli_fetch_array($result)) { ?>
 <tr>
-<td><?php echo $row['gno']; ?></td>
 <td><?php echo $row['name']; ?></td>
+<td><?php echo $row['rollno']; ?></td>
 
 <td>
 </tr> <?php } ?>

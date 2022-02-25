@@ -52,8 +52,8 @@ echo  $_SESSION['uid'] ;
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="mini.php" id="rcorners1">MINI PROJECT</a>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="" id="rcorners1">MAIN PROJECT</a>
+<a href="main.php" id="rcorners1">MAIN PROJECT</a>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="" id="rcorners1">SEMINAR</a>
+<a href="seminar.php" id="rcorners1">SEMINAR</a>
 
 </body>

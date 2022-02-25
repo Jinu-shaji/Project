@@ -1,7 +1,7 @@
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','project');
-$select="select *from work where type like 'mini'";
+$select="select *from work where type like 'seminar'";
 $selresult=mysqli_query($con,$select);
 ?>
 

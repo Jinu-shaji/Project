@@ -1,5 +1,6 @@
 <?php
 session_start();
+$batch=$_SESSION['batch'];
 $con=mysqli_connect('localhost','root','','project');
 if(!$con)
 echo "not connected";
@@ -12,7 +13,7 @@ $phone=$_POST['phone'];
 }
 
 
-$result=mysqli_query($con,"select * from addguide ");
+$result=mysqli_query($con,"select * from guide where batch='$batch'");
 ?>
 
 <html>
@@ -22,10 +23,10 @@ $result=mysqli_query($con,"select * from addguide ");
 <link rel="stylesheet" type="text/css" href="maincss.css">
 <link rel="stylesheet" type="text/css" href="view.css">
 <link rel="stylesheet" type="text/css" href="search.css"></head>
-<body><header>
+<body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover"><header>
             <div class="main">
     <ul>
-<li><a href="advisorhome.php">Home</a></li></ul></div>
+<li><a href="advisorhome.php">HOME</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
         <div class="title">
@@ -39,27 +40,23 @@ echo  $_SESSION['batch'] ;
 <input type="text" name="srch" placeholder="search here.." class="btns">
 <input type="submit" name="search" value="search" class="btn"></tr></table></div>
 </form>
-<table >
+<table style="background-color: silver; background-repeat: no-repeat;background-size: cover;opacity: 0.8;">
 <thead class="trs">
 <tr >
 
-<th>UID</th>
 <th>NAME</th>
-<th>EMAIL</th>
-<th>PHONE</th>
+<th>USERNAME</th>
 
-<th colspan="2"> Action </th></tr></thead>
+<</thead>
 <tbody>
 <?php while ($row=mysqli_fetch_array($result)) { ?>
 <tr>
 
-<td><?php echo $row['uid']; ?></td>
 <td><?php echo $row['name']; ?></td>
-<td><?php echo $row['email']; ?></td>
-<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['uid']; ?></td>
 
-<td>
-<a class="del_btn" name="edit" href="guideedit.php">EDIT</a></td>
+
+
 </tr> <?php } ?>
 </table>
 </body>

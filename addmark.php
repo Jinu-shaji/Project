@@ -17,7 +17,7 @@ $result1=mysqli_query($con,"select * from work ");
 <body style="background-image: url('cell.jpg'); background-repeat: no-repeat;background-size: cover"><header>
             <div class="main">
     <ul>
-<li><a href="adminhome.php">HOME</a></li></ul></div>
+<li><a href="guidehome.php">HOME</a></li></ul></div>
         <div class="title">
             <h3>PROJECT PIVOT </h3></div></header>
         <div class="title">
@@ -39,8 +39,14 @@ $result1=mysqli_query($con,"select * from work ");
 <tbody>
 <?php while ($row=mysqli_fetch_array($result)) { ?>
 <tr>
-<td><?php echo $row['gno']; ?></td>
-<td><?php echo $row['id']; 
+<td><?php 
+$gno=$row['gno'];
+echo $gno; ?></td>
+<td>
+
+	<?php 
+$id=$row['id'];
+	echo $id; 
 ?></td>
 
 
@@ -62,7 +68,6 @@ $result1=mysqli_query($con,"select * from work ");
 $con=mysqli_connect('localhost','root','','project');
 if (isset($_POST['save'])) {
     $mark=$_POST['mark'];
-   
     
     
   

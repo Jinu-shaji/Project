@@ -1,14 +1,16 @@
 <?php
 session_start();
 $con=mysqli_connect('localhost','root','','project');
-$select="select *from work where type like 'mini'";
+$select="select *from work where type like 'main'";
 $selresult=mysqli_query($con,$select);
+$select1="select *from upworkmain ";
+$selresult1=mysqli_query($con,$select);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>works</title>
+  <title>works</title>
   <link rel="stylesheet" type="text/css" href="maincss.css">
   <link rel="stylesheet" type="text/css" href="view.css">
   
@@ -17,7 +19,7 @@ $selresult=mysqli_query($con,$select);
   <header>
     <div class="main">
   <ul>
-<li><a href="guidehome.php">HOME</a></li>
+<li><a href="studenthome.php">HOME</a></li>
 
 <li><a href="">CHANGE PASSWORD</a>
 </li>
@@ -27,12 +29,12 @@ $selresult=mysqli_query($con,$select);
 </ul></div><form method="POST" action="" >
     <div class="title">
       <h3>PROJECT PIVOT </h3></div></header>
-	<center><h1>WORKS</h1><br><br><br><br><br>
-	<table >
+  <center><h1>WORKS</h1><br><br><br><br><br>
+  <table >
 <thead  >
 <tr >
 <th>WORK</th>
-<th>DEADLINE</th>
+<th>MARK</th>
 
 </thead>
 <tbody>
@@ -41,10 +43,16 @@ $selresult=mysqli_query($con,$select);
 <td><?php 
 $instr=$row['instruction'];
 echo $instr;
+$s1="select id from work where instruction='$instr'";
+$si1=mysqli_query($con,$s1);
+while ($row=mysqli_fetch_array($si1)) {
+  $id=$row['id'];
+}
 
 
- ?>
- <td><?php echo $row['t2']; ?></td>
+
+?>
+ <td></td>
 
 </form></td>
 
